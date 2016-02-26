@@ -1,0 +1,449 @@
+        <!doctype html>
+        <html lang="en">
+
+        	<head>
+        		<meta charset="utf-8">
+
+            <title>hackerschool | React JS</title>
+
+        		<meta name="description" content="React JS Workshop">
+            <meta name="author" content="Harish V">
+
+        		<meta name="apple-mobile-web-app-capable" content="yes" />
+        		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        		<link rel="stylesheet" href="css/reveal.css">
+        		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+        		<!-- Code syntax highlighting -->
+        		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+        		<!-- Printing and PDF exports -->
+        		<script>
+        			var link = document.createElement( 'link' );
+        			link.rel = 'stylesheet';
+        			link.type = 'text/css';
+        			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        			document.getElementsByTagName( 'head' )[0].appendChild( link );
+        		</script>
+
+        		<!--[if lt IE 9]>
+        		<script src="lib/js/html5shiv.js"></script>
+        		<![endif]-->
+        	</head>
+
+        	<body>
+
+        		<div class="reveal">
+
+        			<!-- Any section element inside of this container is displayed as a slide -->
+        			<div class="slides">
+        				<section>
+                  <img width="300" src="http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png" alt="" />
+                  <h3>Hackerschool by @NUSHackers</h3>
+                  <h5>Saturday, 27th February</h5>
+        					<p>
+                    <a href="http://harishv7.github.io/reactjs">Slides: http://harishv7.github.io/reactjs</a> <br>
+                    <a href="http://bit.ly/reactjsmaterials">Materials: http://bit.ly/reactjsmaterials</a> <br> <br>
+                    <small><a href="http://harishv7.github.io">Harish V</a> / <a href="http://twitter.com/harishv207">@harishv207</a></small>
+        					</p>
+        				</section>
+
+        				<section>
+                  <h3>This workshop</h3>
+        					<ul>
+                    <li class="fragment">Intermediate level</li>
+                    <li class="fragment">Assumes knowledge of HTML/CSS/JavaScript</li>
+                    <li class="fragment">Thinking in React</li>
+                    <li class="fragment">React APIs</li>
+                    <li class="fragment">Writing a simple React TODO application</li>
+                    <li class="fragment">Extensions: Flux & React Native </li>
+        					</ul>
+        				</section>
+
+        				<section>
+                  <h2>Software Required</h2>
+        					<ul>
+                    <li>Google Chrome - <a href="https://www.google.com/chrome/browser/desktop/">Download</a></li>
+                    <li>Sublime Text - <a href="http://www.sublimetext.com/3">Download</a></li>
+                    <li>Course materials / Application skeleton - <a href="http://bit.ly/reactjsmaterials">Download</a></li>
+                    <li>Mongoose, if you're on Windows (included in materials)</li>
+        					</ul>
+        				</section>
+
+                <section>
+                  <h3>JSX Syntax Highlighting</h3>
+                  <ul>
+                    <li>Download and install Sublime Text 3 </li>
+                    <li>Install: <a href="https://packagecontrol.io/installation">https://packagecontrol.io/installation</a></li>
+                    <li>Press Cmd + Shift + P (on Mac OS) or Ctrl + Shift + P (on Windows)</li>
+                    <li>Type "install" in the input field and press enter </li>
+                    <li>Wait for it to load Package Control</li>
+                    <li>Type "jsx" and press enter </li>
+                  </ul>
+                </section>
+
+        				<section>
+
+                  <section>
+                  <h2>NUS Hackers</h2>
+                  <p>
+                    <a href="http://nushackers.org">http://nushackers.org</a>
+                  </p>
+                  <p>
+                    <a href="http://facebook.com/nushackers">http://facebook.com/nushackers</a>
+                  </p>
+                  </section>
+
+                  <section>
+                    <h2>Friday Hacks</h2>
+                    <img src="images/fh.png">
+                  </section>
+
+                  <section>
+                    <img src="images/hslogo.png">
+                  </section>
+
+                  <section>
+                  <h3>Hack & Roll</h3>
+                    <img src="images/hnr.jpg">
+                  </section>
+
+                  <section>
+                    <h2>Hackerspace</h2>
+                    <p>Located at AS6-02-09/10/11</p>
+                  </section>
+
+        				</section>
+
+                <section>
+                  <h2>Help?</h2>
+                  <img width="500" src="images/help.jpg">
+                </section>
+
+                <section>
+                  <h3>Let's get started</h3>
+                  <img src="images/react.png">
+                </section>
+
+                <section>
+                  <img width="900" src="images/brace.jpg" alt="" />
+                </section>
+
+                <section>
+                  <h2 class="fragment">React is different.</h2>
+                </section>
+
+        				<section>
+                  <h2>What is React?</h2>
+        					<blockquote cite="https://github.com/facebook/react">
+        						&ldquo;A declarative, efficient, and flexible JavaScript library for building user interfaces.&rdquo;
+        					</blockquote>
+
+                  <p class="fragment">It's a <b>UI library</b>.</p>
+
+                  <p class="fragment">i.e. It's only the <b>view layer</b> in Model-View-Controller</p>
+        				</section>
+
+                <section>
+                  <h2>What makes React special?</h2>
+                  <p class="fragment">Simple to learn</p>
+                  <p class="fragment">Reusable components</p>
+                  <p class="fragment">Easy to use with existing projects</p>
+                </section>
+
+        				<section>
+                  <h2>What apps are built with React?</h2>
+                  <p class="fragment">instagram.com</p>
+                  <p class="fragment">facebook.com (parts of it)</p>
+        				</section>
+
+        				<section>
+                  <h2>Why was React built?</h2>
+        				</section>
+
+        				<section>
+                  <div>
+                    <h4>Traditional JavaScript</h4>
+                    <p>State changes -> Define and make UI changes yourself (manual)</p>
+
+                    <ol>
+                      <li class="fragment">Listen for changes</li>
+                      <li class="fragment">Add a new todo item</li>
+                      <li class="fragment">Append new item to item list</li>
+                      <li class="fragment">Keep track of which new item was added</li>
+                      <li class="fragment">Use jQuery to update multiple parts of the UI</li>
+                      <li class="fragment">You need to <b>keep track</b> of state</li>
+                    </ol>
+                  </div>
+                </section>
+
+                <section>
+                  <div>
+                    <h4>React.js</h4>
+                    <p>State changes -> UI re-renders based on new state (auto)</p>
+                    <ol>
+                      <li class="fragment">Add a new todo item</li>
+                      <li class="fragment">Append new item to item list</li>
+                      <li class="fragment">Update state with new item list with <code>this.setState</code></li>
+                    </ol>
+                  </div>
+        				</section>
+
+        				<section>
+                  <h3>Building blocks: Components</h3>
+                  <p>UI components are <b>composable</b> and <b>reusable</b>, 
+                  and can present data that changes over time.</p>
+        				</section>
+
+                <section>
+                  <section>
+                  <h2>How does React do it? </h2>
+                  </section>
+                  <section>
+                  <h3>Virtual DOM</h4>
+                  <p class="fragment">Helps identify which parts have changed by comparing the new version with the previously stored one</p>
+                  <p class="fragment">Determines how to upload the browser's DOM more efficiently</p>
+                  </section>
+                  <section>
+                    <h3>Props</h3>
+                    <p>Properties which can be passed around (even among components)</p>
+                  </section>
+                  <section>
+                    <h3>States</h3>
+                    <p>Models the current app. Used to update the UI.</p>
+                  </section>
+                </section>
+
+                <section>
+                  <iframe width="800" height="500" src="http://todomvc.com/examples/react/" frameborder="0"></iframe>
+                </section>
+
+                <section>
+                  <h5>Thinking in React</h5>
+                  <img width="800" src="images/todomvc-normal.png" alt="" />
+
+                </section>
+
+                <section>
+                  <h5>Thinking in React</h5>
+                  <h6>Break it down into components</h6>
+                  <img width="700" src="images/todomvc-annotated.png" alt="" />
+                  <p class="fragment">App, Header, InputField, TodoItemList, TodoItem..</p>
+                </section>
+
+                <section>
+                  <section>
+                  <h3>Some Important Details</h3>
+                  <a href="https://facebook.github.io/react/docs/component-specs.html">Reference Link</a>
+                  </section>
+
+                  <section>
+                  <h5>Component Methods</h5>
+                  <p><code>render (compulsory)</code></p>
+                  <code>getInitialState</code></p>
+                  <code>getDefaultProps</code></p>
+                  </section>
+
+                  <section>
+                  <h5>Lifecycle Methods</h5>
+                  <p><code>componentWillMount</code></p>
+                  <p><code>componentDidMount</code></p>
+                  <p><code>shouldComponentUpdate</code></p>
+                  <p><code>componentWillUpdate</code></p>
+                  <p><code>componentDidUpdate</code></p>
+                  </section>
+                  </section>
+                </section>
+
+                <section>
+                  <h2>How do you describe a component?</h2>
+                  <p>e.g. a <code>div</code> containing "Hello world."</p>
+                </section>
+
+                <!-- <section>
+                  <h4>React component (JS)</h4>
+                  <pre><code class="hljs" data-trim>
+        var MyApp = React.createClass({
+          render: function() {
+            return React.createElement(
+              "div", // HTML Tag
+              null,
+              "Hello world." // Text within the div
+            );
+          }
+        });
+
+        ReactDOM.render(React.createElement(MyApp), 
+          document.getElementById("todoapp"));
+                  </code></pre>
+                  <p>A component implements a <code>render</code> method which returns one single child.</p>
+                  <p><code>render</code> is called when the component is <b>mounted</b></p>
+                </section> -->
+
+                <section>
+                  <h4>React component (JSX)</h4>
+                  <pre><code class="hljs" data-trim>
+        var MyApp = React.createClass({
+          render: function() {
+            return (
+              // className, not class
+              &lt;div className="main"&gt;
+                Hello world.
+              &lt;div&gt;
+            );
+          }
+        });
+
+                  </code></pre>
+                  <pre><code class="hljs" data-trim>ReactDOM.render(&lt;MyApp&gt;, document.getElementById("todoapp"));</code> </pre>
+                  <p>JSX: HTML-like markup</p>
+                  <p>Write UI code in JavaScript!</p>
+                </section>
+
+                <section>
+                  <h6>Let's start writing React.</h6>
+
+                </section>
+
+                <section>
+                  <h4>Child components</h4>
+                  <pre><code class="hljs" data-trim>
+        var MyApp = React.createClass({
+          render: function() {
+            return (
+              &lt;div&gt;
+                &lt;ChildComponent&gt;
+              &lt;div&gt;
+            )
+          }
+        });
+        var ChildComponent = React.createClass({
+          render: function() {
+            return (
+              &lt;div&gt;Hello world.&lt;/div&gt;
+            )
+          }
+        });
+                  </code></pre>
+                </section>
+
+                <section>
+                  <h4>Props: managing immutable state</h4>
+                  <pre><code class="hljs" data-trim>
+        var MyApp = React.createClass({
+          // React method to set default props
+          getDefaultProps: function() {
+            return { name: "Tom" }; 
+          },
+
+          render: function() {
+            return (
+              &lt;div&gt;
+                Good morning, {this.props.name}
+
+                // Create a prop named "text" 
+                &lt;ChildComponent text="Hello world" /&gt;
+              &lt;/div&gt;
+            );
+          }
+        });
+
+        var ChildComponent = React.createClass({
+          render: function() {
+            return (
+              // Get the text prop 
+              &lt;div&gt;{this.props.text}&lt;/div&gt;
+            );
+          }
+        });
+                  </code></pre>
+                </section>
+
+                <section>
+                  <h2>States</h2>
+                </section>
+
+                <section>
+                  <h2>States</h2>
+                  <ol>
+                    <li> Build new Virtual DOM tree </li>
+                    <li> Diff with old one </li>
+                    <li> Compute minimal set of changes </li>
+                    <li> Put them in a queue </li>
+                    <li> Batch render all changes to browser </li>
+                  </ol>
+                </section>
+
+                <section>
+                    <h3>Concepts summary</h3>
+                    <ul>
+                      <li class="fragment">Just the <b>V</b> in MVC</li>
+                      <li class="fragment">Write <b>JSX</b> to represent HTML in components</li>
+                      <li class="fragment">Uses a <b>virtual DOM</b> as view representation</li>
+                      <li class="fragment"><b>One-way data-binding:</b> Changes to state will be rendered automatically</li>
+                      <li class="fragment">Smart <b>diffing</b> algorithm computes the changes between old and new virtual DOM</li>
+                    </ul>
+                </section>
+
+                <section>
+                  <h3>Extensions: Flux & React Native </h3>
+                  <p> Flux: An Application Architecture Framework</p>
+                  <p>React Native: Creating rich mobile applications the React way</p>
+                </section>
+
+        				<section style="text-align: left;">
+        					<h1 style="text-align: center;">THE END</h1>
+                  <p style="text-align: center"><a href="http://bit.ly/reactjs2016">Post-Workshop Feedback: http://bit.ly/reactjs2016</a></p>
+        					<p style="text-align: center;">
+                  
+                  Resources: <br>
+                    <a href="https://facebook.github.io/flux/docs/overview.html">Flux</a> <br>
+                    <a href="https://facebook.github.io/react/blog/2015/05/01/graphql-introduction.html">GraphQL</a> <br>
+                    <a href="https://facebook.github.io/relay/">Relay</a> <br>
+                    <a href="https://facebook.github.io/react-native/">React Native</a>
+        					</p>
+        				</section>
+
+        			</div>
+
+        		</div>
+
+        		<script src="lib/js/head.min.js"></script>
+        		<script src="js/reveal.js"></script>
+            <script src="plugin/highlight/highlight.js" type="text/javascript"></script>
+            <script src="plugin/highlight/highlight-js.js" type="text/javascript"></script>
+
+        		<script>
+
+              function initHighlightJS() {
+                hljs.registerLanguage('js', H_js);
+                hljs.initHighlightingOnLoad();
+              }
+
+        			// Full list of configuration options available at:
+        			// https://github.com/hakimel/reveal.js#configuration
+        			Reveal.initialize({
+        				controls: true,
+        				progress: true,
+        				history: true,
+        				center: true,
+
+        				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        				// Optional reveal.js plugins
+        				dependencies: [
+        					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { this.initHighlightJS() }.bind(this) },
+        					{ src: 'plugin/zoom-js/zoom.js', async: true },
+        					{ src: 'plugin/notes/notes.js', async: true }
+        				]
+        			});
+        		</script>
+
+        	</body>
+        </html>
